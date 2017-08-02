@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:title="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/add_tab_slidingLayout"
+    android:background="#ffffff">
+    <com.mynew.view.viewgroup.TitleBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        title:title_text="频道管理"
+        title:right_button_visible="false"
+        android:id="@+id/add_tab_titleBarView"
+        android:layout_alignParentTop="true">
+    </com.mynew.view.viewgroup.TitleBarView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/add_tab_titleBarView"
+        android:background="#ffffff">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/my_tab_item_title"
+                   android:textColor="#000000"
+                   android:textSize="17sp"
+                   android:textStyle="bold"
+                   android:text="我的频道"
+                   android:layout_marginRight="10dp"
+                   android:layout_marginLeft="10dp"/>
+               <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/my_tab_item_content"
+                    android:textColor="#000000"
+                    android:text="单击增删频道，长按拖动排序"
+                    android:textSize="11sp"/>
+             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#b3b3b3"/>
+
+            <com.mynew.view.viewgroup.DragGridView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/dragGridView"
+                android:numColumns="4"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp">
+            </com.mynew.view.viewgroup.DragGridView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#b3b3b3"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/other_tab_item_title"
+                android:textColor="#000000"
+                android:text="更多频道"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
+            <com.mynew.view.viewgroup.OtherGridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/otherGridView"
+                android:numColumns="4"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="0dp">
+            </com.mynew.view.viewgroup.OtherGridView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
